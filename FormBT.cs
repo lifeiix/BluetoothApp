@@ -12,6 +12,8 @@ namespace BT_UP
         {
             InitializeComponent();
 
+            pairDeviceButton.Enabled = true;
+            disconnectDeviceButton.Enabled = false;
         }
         public void clearDevices() //wylaczenie sekcji urzadzen
         {
@@ -34,7 +36,7 @@ namespace BT_UP
             if (bluetooth.bluetoothRadios.Length > 0) //jezeli adaptery znalezione
                 foreach (var device in bluetooth.bluetoothRadios)//iterujemy po ich liscie
                     adaptersListBox.Items.Add(device.Name);//dodajemy je do listboxa
-            MessageBox.Show("Wyszukiwanie adapterów zakończone");
+            //MessageBox.Show("Wyszukiwanie adapterów zakończone");
         }
 
         private void chooseAdapterButton_Click(object sender, EventArgs e) //wybranie adaptera
@@ -57,7 +59,7 @@ namespace BT_UP
             bluetooth.FindDevices(authenticateCheckBox.Checked, rememberedCheckBox.Checked, unknownCheckBox.Checked);
             foreach (var device in bluetooth.bluetoothDeviceInfo)//iterowanie listy
                 devicesListBox.Items.Add(device.DeviceName);//dodanie elemtnwo do listy
-            MessageBox.Show("Wyszukiwanie urządzeń zakończone");
+            //MessageBox.Show("Wyszukiwanie urządzeń zakończone");
         }
 
         private void selectDeviceButton_Click(object sender, EventArgs e)
@@ -71,10 +73,10 @@ namespace BT_UP
                 actualDeviceGroupBox.Enabled = true; //wlaczamy sekcje info i wysylania pliku
                 sendFileGroupBox.Enabled = true;
                 bluetooth.device = bluetooth.bluetoothDeviceInfo[devicesListBox.SelectedIndex];//przypisanie wybranego urzadzenia
-               
+
                 deviceNameTextBox.Text = bluetooth.device.DeviceName.ToString(); //zmiana labelek nazwy i adresu
                 deviceMacTextBox.Text = bluetooth.device.DeviceAddress.ToString();
-                MessageBox.Show("Pobieranie danych urządzenia zakończone.");
+                //MessageBox.Show("Pobieranie danych urządzenia zakończone.");
             }
         }
 
@@ -92,15 +94,25 @@ namespace BT_UP
 
         private void sendFileButton_Click(object sender, EventArgs e) //wysylanie pliku 
         {
-            if (choosenFile != null && bluetooth.device!=null)//jezeli urzadzenie i plik jest
-            {
-                bluetooth.SendFile(choosenFile);//przekaz plik do metody
-            }
+            MessageBox.Show("Connect to device");
+            bluetooth.ConnectToDevice();//metoda parowania
+
+            //if (choosenFile != null && bluetooth.device!=null)//jezeli urzadzenie i plik jest
+            //{
+            //    bluetooth.SendFile(choosenFile);//przekaz plik do metody
+            //}
         }
 
         private void pairDeviceButton_Click(object sender, EventArgs e)//parowaie urzadzniea
         {
-            bluetooth.ConnectToDevice();//metoda parowania
+            disconnectDeviceButton.Enabled = bluetooth.ConnectToDevice();
+            pairDeviceButton.Enabled = !disconnectDeviceButton.Enabled;
+        }
+
+        private void disconnectDeviceButton_Click(object sender, EventArgs e)
+        {
+            disconnectDeviceButton.Enabled = bluetooth.DisconnectDevice();
+            pairDeviceButton.Enabled = !disconnectDeviceButton.Enabled;
         }
     }
 }

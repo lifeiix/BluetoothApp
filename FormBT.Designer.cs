@@ -55,6 +55,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.adapterMacBox = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.disconnectDeviceButton = new System.Windows.Forms.Button();
             this.actualDeviceGroupBox.SuspendLayout();
             this.allDevicesGroupBox.SuspendLayout();
             this.sendFileGroupBox.SuspendLayout();
@@ -65,30 +66,34 @@
             // devicesListBox
             // 
             this.devicesListBox.FormattingEnabled = true;
-            this.devicesListBox.Location = new System.Drawing.Point(8, 17);
+            this.devicesListBox.ItemHeight = 15;
+            this.devicesListBox.Location = new System.Drawing.Point(11, 20);
+            this.devicesListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.devicesListBox.Name = "devicesListBox";
-            this.devicesListBox.Size = new System.Drawing.Size(210, 134);
+            this.devicesListBox.Size = new System.Drawing.Size(279, 154);
             this.devicesListBox.TabIndex = 0;
             // 
             // searchDevicesButton
             // 
             this.searchDevicesButton.AutoSize = true;
-            this.searchDevicesButton.Location = new System.Drawing.Point(8, 203);
+            this.searchDevicesButton.Location = new System.Drawing.Point(11, 234);
+            this.searchDevicesButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.searchDevicesButton.Name = "searchDevicesButton";
-            this.searchDevicesButton.Size = new System.Drawing.Size(95, 24);
+            this.searchDevicesButton.Size = new System.Drawing.Size(180, 29);
             this.searchDevicesButton.TabIndex = 1;
-            this.searchDevicesButton.Text = "Szukaj urządzeń";
+            this.searchDevicesButton.Text = "搜索";
             this.searchDevicesButton.UseVisualStyleBackColor = true;
             this.searchDevicesButton.Click += new System.EventHandler(this.searchDevicesButton_Click);
             // 
             // pairDeviceButton
             // 
             this.pairDeviceButton.AutoSize = true;
-            this.pairDeviceButton.Location = new System.Drawing.Point(61, 75);
+            this.pairDeviceButton.Location = new System.Drawing.Point(12, 81);
+            this.pairDeviceButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pairDeviceButton.Name = "pairDeviceButton";
-            this.pairDeviceButton.Size = new System.Drawing.Size(95, 24);
+            this.pairDeviceButton.Size = new System.Drawing.Size(121, 29);
             this.pairDeviceButton.TabIndex = 2;
-            this.pairDeviceButton.Text = "Paruj urządzenie";
+            this.pairDeviceButton.Text = "连接";
             this.pairDeviceButton.UseVisualStyleBackColor = true;
             this.pairDeviceButton.Click += new System.EventHandler(this.pairDeviceButton_Click);
             // 
@@ -96,73 +101,82 @@
             // 
             this.sendFileButton.AutoSize = true;
             this.sendFileButton.Enabled = false;
-            this.sendFileButton.Location = new System.Drawing.Point(110, 47);
+            this.sendFileButton.Location = new System.Drawing.Point(147, 54);
+            this.sendFileButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.sendFileButton.Name = "sendFileButton";
-            this.sendFileButton.Size = new System.Drawing.Size(95, 24);
+            this.sendFileButton.Size = new System.Drawing.Size(136, 29);
             this.sendFileButton.TabIndex = 3;
-            this.sendFileButton.Text = "Wyślij plik";
+            this.sendFileButton.Text = "发送";
             this.sendFileButton.UseVisualStyleBackColor = true;
             this.sendFileButton.Click += new System.EventHandler(this.sendFileButton_Click);
             // 
             // deviceNameTextBox
             // 
             this.deviceNameTextBox.Enabled = false;
-            this.deviceNameTextBox.Location = new System.Drawing.Point(104, 17);
+            this.deviceNameTextBox.Location = new System.Drawing.Point(139, 20);
+            this.deviceNameTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.deviceNameTextBox.Name = "deviceNameTextBox";
-            this.deviceNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.deviceNameTextBox.Size = new System.Drawing.Size(132, 25);
             this.deviceNameTextBox.TabIndex = 4;
             // 
             // deviceMacTextBox
             // 
             this.deviceMacTextBox.Enabled = false;
-            this.deviceMacTextBox.Location = new System.Drawing.Point(104, 43);
+            this.deviceMacTextBox.Location = new System.Drawing.Point(139, 50);
+            this.deviceMacTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.deviceMacTextBox.Name = "deviceMacTextBox";
-            this.deviceMacTextBox.Size = new System.Drawing.Size(100, 20);
+            this.deviceMacTextBox.Size = new System.Drawing.Size(132, 25);
             this.deviceMacTextBox.TabIndex = 5;
             // 
             // deviceNameLabel
             // 
             this.deviceNameLabel.AutoSize = true;
-            this.deviceNameLabel.Location = new System.Drawing.Point(6, 20);
+            this.deviceNameLabel.Location = new System.Drawing.Point(8, 23);
+            this.deviceNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.deviceNameLabel.Name = "deviceNameLabel";
-            this.deviceNameLabel.Size = new System.Drawing.Size(97, 13);
+            this.deviceNameLabel.Size = new System.Drawing.Size(82, 15);
             this.deviceNameLabel.TabIndex = 6;
-            this.deviceNameLabel.Text = "Nazwa urządzenia:";
+            this.deviceNameLabel.Text = "设备名称：";
             // 
             // deviceMacLable
             // 
             this.deviceMacLable.AutoSize = true;
-            this.deviceMacLable.Location = new System.Drawing.Point(39, 46);
+            this.deviceMacLable.Location = new System.Drawing.Point(9, 53);
+            this.deviceMacLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.deviceMacLable.Name = "deviceMacLable";
-            this.deviceMacLable.Size = new System.Drawing.Size(63, 13);
+            this.deviceMacLable.Size = new System.Drawing.Size(69, 15);
             this.deviceMacLable.TabIndex = 7;
-            this.deviceMacLable.Text = "Adres MAC:";
+            this.deviceMacLable.Text = "MAC地址:";
             // 
             // selectDeviceButton
             // 
             this.selectDeviceButton.AutoSize = true;
-            this.selectDeviceButton.Location = new System.Drawing.Point(109, 203);
+            this.selectDeviceButton.Location = new System.Drawing.Point(145, 234);
+            this.selectDeviceButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.selectDeviceButton.Name = "selectDeviceButton";
-            this.selectDeviceButton.Size = new System.Drawing.Size(109, 24);
+            this.selectDeviceButton.Size = new System.Drawing.Size(212, 29);
             this.selectDeviceButton.TabIndex = 8;
-            this.selectDeviceButton.Text = "Wybierz urządzenie";
+            this.selectDeviceButton.Text = "选择";
             this.selectDeviceButton.UseVisualStyleBackColor = true;
             this.selectDeviceButton.Click += new System.EventHandler(this.selectDeviceButton_Click);
             // 
             // actualDeviceGroupBox
             // 
+            this.actualDeviceGroupBox.Controls.Add(this.disconnectDeviceButton);
             this.actualDeviceGroupBox.Controls.Add(this.deviceMacLable);
             this.actualDeviceGroupBox.Controls.Add(this.deviceNameLabel);
             this.actualDeviceGroupBox.Controls.Add(this.deviceMacTextBox);
             this.actualDeviceGroupBox.Controls.Add(this.deviceNameTextBox);
             this.actualDeviceGroupBox.Controls.Add(this.pairDeviceButton);
             this.actualDeviceGroupBox.Enabled = false;
-            this.actualDeviceGroupBox.Location = new System.Drawing.Point(500, 29);
+            this.actualDeviceGroupBox.Location = new System.Drawing.Point(667, 33);
+            this.actualDeviceGroupBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.actualDeviceGroupBox.Name = "actualDeviceGroupBox";
-            this.actualDeviceGroupBox.Size = new System.Drawing.Size(210, 113);
+            this.actualDeviceGroupBox.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.actualDeviceGroupBox.Size = new System.Drawing.Size(280, 130);
             this.actualDeviceGroupBox.TabIndex = 11;
             this.actualDeviceGroupBox.TabStop = false;
-            this.actualDeviceGroupBox.Text = "Obecne urządzenie";
+            this.actualDeviceGroupBox.Text = "设备信息";
             // 
             // allDevicesGroupBox
             // 
@@ -173,59 +187,66 @@
             this.allDevicesGroupBox.Controls.Add(this.searchDevicesButton);
             this.allDevicesGroupBox.Controls.Add(this.devicesListBox);
             this.allDevicesGroupBox.Enabled = false;
-            this.allDevicesGroupBox.Location = new System.Drawing.Point(256, 12);
+            this.allDevicesGroupBox.Location = new System.Drawing.Point(341, 14);
+            this.allDevicesGroupBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.allDevicesGroupBox.Name = "allDevicesGroupBox";
-            this.allDevicesGroupBox.Size = new System.Drawing.Size(229, 246);
+            this.allDevicesGroupBox.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.allDevicesGroupBox.Size = new System.Drawing.Size(305, 284);
             this.allDevicesGroupBox.TabIndex = 12;
             this.allDevicesGroupBox.TabStop = false;
-            this.allDevicesGroupBox.Text = "Lista urządzeń";
+            this.allDevicesGroupBox.Text = "设备列表";
             // 
             // authenticateCheckBox
             // 
             this.authenticateCheckBox.AutoSize = true;
-            this.authenticateCheckBox.Location = new System.Drawing.Point(11, 155);
+            this.authenticateCheckBox.Location = new System.Drawing.Point(15, 179);
+            this.authenticateCheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.authenticateCheckBox.Name = "authenticateCheckBox";
-            this.authenticateCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.authenticateCheckBox.Size = new System.Drawing.Size(125, 19);
             this.authenticateCheckBox.TabIndex = 11;
-            this.authenticateCheckBox.Text = "Sparowane";
+            this.authenticateCheckBox.Text = "Authenticate";
             this.authenticateCheckBox.UseVisualStyleBackColor = true;
             // 
             // unknownCheckBox
             // 
             this.unknownCheckBox.AutoSize = true;
-            this.unknownCheckBox.Location = new System.Drawing.Point(94, 178);
+            this.unknownCheckBox.Location = new System.Drawing.Point(125, 205);
+            this.unknownCheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.unknownCheckBox.Name = "unknownCheckBox";
-            this.unknownCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.unknownCheckBox.Size = new System.Drawing.Size(85, 19);
             this.unknownCheckBox.TabIndex = 10;
-            this.unknownCheckBox.Text = "Nieznane";
+            this.unknownCheckBox.Text = "Unknown";
             this.unknownCheckBox.UseVisualStyleBackColor = true;
             // 
             // rememberedCheckBox
             // 
             this.rememberedCheckBox.AutoSize = true;
-            this.rememberedCheckBox.Location = new System.Drawing.Point(129, 155);
+            this.rememberedCheckBox.Location = new System.Drawing.Point(172, 179);
+            this.rememberedCheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.rememberedCheckBox.Name = "rememberedCheckBox";
-            this.rememberedCheckBox.Size = new System.Drawing.Size(88, 17);
+            this.rememberedCheckBox.Size = new System.Drawing.Size(109, 19);
             this.rememberedCheckBox.TabIndex = 9;
-            this.rememberedCheckBox.Text = "Zapamiętane";
+            this.rememberedCheckBox.Text = "Remembered";
             this.rememberedCheckBox.UseVisualStyleBackColor = true;
             // 
             // choosenFileTextBox
             // 
             this.choosenFileTextBox.Enabled = false;
-            this.choosenFileTextBox.Location = new System.Drawing.Point(9, 21);
+            this.choosenFileTextBox.Location = new System.Drawing.Point(12, 24);
+            this.choosenFileTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.choosenFileTextBox.Name = "choosenFileTextBox";
-            this.choosenFileTextBox.Size = new System.Drawing.Size(195, 20);
+            this.choosenFileTextBox.Size = new System.Drawing.Size(259, 25);
             this.choosenFileTextBox.TabIndex = 13;
             // 
             // chooseFileButton
             // 
             this.chooseFileButton.AutoSize = true;
-            this.chooseFileButton.Location = new System.Drawing.Point(8, 47);
+            this.chooseFileButton.Location = new System.Drawing.Point(11, 54);
+            this.chooseFileButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chooseFileButton.Name = "chooseFileButton";
-            this.chooseFileButton.Size = new System.Drawing.Size(95, 24);
+            this.chooseFileButton.Size = new System.Drawing.Size(151, 29);
             this.chooseFileButton.TabIndex = 14;
-            this.chooseFileButton.Text = "Wybierz plik";
+            this.chooseFileButton.Text = "选择";
             this.chooseFileButton.UseVisualStyleBackColor = true;
             this.chooseFileButton.Click += new System.EventHandler(this.chooseFileButton_Click);
             // 
@@ -235,61 +256,70 @@
             this.sendFileGroupBox.Controls.Add(this.choosenFileTextBox);
             this.sendFileGroupBox.Controls.Add(this.sendFileButton);
             this.sendFileGroupBox.Enabled = false;
-            this.sendFileGroupBox.Location = new System.Drawing.Point(500, 155);
+            this.sendFileGroupBox.Location = new System.Drawing.Point(667, 179);
+            this.sendFileGroupBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.sendFileGroupBox.Name = "sendFileGroupBox";
-            this.sendFileGroupBox.Size = new System.Drawing.Size(209, 84);
+            this.sendFileGroupBox.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.sendFileGroupBox.Size = new System.Drawing.Size(279, 97);
             this.sendFileGroupBox.TabIndex = 15;
             this.sendFileGroupBox.TabStop = false;
-            this.sendFileGroupBox.Text = "Transfer pliku";
+            this.sendFileGroupBox.Text = "发送文件";
             // 
             // adaptersGroupBox
             // 
             this.adaptersGroupBox.Controls.Add(this.chooseAdapterButton);
             this.adaptersGroupBox.Controls.Add(this.searchAdaptersButton);
             this.adaptersGroupBox.Controls.Add(this.adaptersListBox);
-            this.adaptersGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.adaptersGroupBox.Location = new System.Drawing.Point(16, 14);
+            this.adaptersGroupBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.adaptersGroupBox.Name = "adaptersGroupBox";
-            this.adaptersGroupBox.Size = new System.Drawing.Size(229, 139);
+            this.adaptersGroupBox.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.adaptersGroupBox.Size = new System.Drawing.Size(305, 160);
             this.adaptersGroupBox.TabIndex = 13;
             this.adaptersGroupBox.TabStop = false;
-            this.adaptersGroupBox.Text = "Lista adapterów";
+            this.adaptersGroupBox.Text = "适配器列表";
             // 
             // chooseAdapterButton
             // 
             this.chooseAdapterButton.AutoSize = true;
-            this.chooseAdapterButton.Location = new System.Drawing.Point(109, 105);
+            this.chooseAdapterButton.Location = new System.Drawing.Point(145, 121);
+            this.chooseAdapterButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chooseAdapterButton.Name = "chooseAdapterButton";
-            this.chooseAdapterButton.Size = new System.Drawing.Size(109, 24);
+            this.chooseAdapterButton.Size = new System.Drawing.Size(183, 29);
             this.chooseAdapterButton.TabIndex = 8;
-            this.chooseAdapterButton.Text = "Wybierz adapter";
+            this.chooseAdapterButton.Text = "选择";
             this.chooseAdapterButton.UseVisualStyleBackColor = true;
             this.chooseAdapterButton.Click += new System.EventHandler(this.chooseAdapterButton_Click);
             // 
             // searchAdaptersButton
             // 
             this.searchAdaptersButton.AutoSize = true;
-            this.searchAdaptersButton.Location = new System.Drawing.Point(8, 105);
+            this.searchAdaptersButton.Location = new System.Drawing.Point(11, 121);
+            this.searchAdaptersButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.searchAdaptersButton.Name = "searchAdaptersButton";
-            this.searchAdaptersButton.Size = new System.Drawing.Size(102, 24);
+            this.searchAdaptersButton.Size = new System.Drawing.Size(193, 29);
             this.searchAdaptersButton.TabIndex = 1;
-            this.searchAdaptersButton.Text = "Szukaj adapterów";
+            this.searchAdaptersButton.Text = "搜索";
             this.searchAdaptersButton.UseVisualStyleBackColor = true;
             this.searchAdaptersButton.Click += new System.EventHandler(this.searchAdaptersButton_Click);
             // 
             // adaptersListBox
             // 
             this.adaptersListBox.FormattingEnabled = true;
-            this.adaptersListBox.Location = new System.Drawing.Point(8, 17);
+            this.adaptersListBox.ItemHeight = 15;
+            this.adaptersListBox.Location = new System.Drawing.Point(11, 20);
+            this.adaptersListBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.adaptersListBox.Name = "adaptersListBox";
-            this.adaptersListBox.Size = new System.Drawing.Size(210, 82);
+            this.adaptersListBox.Size = new System.Drawing.Size(279, 94);
             this.adaptersListBox.TabIndex = 0;
             // 
             // adapterNameBox
             // 
             this.adapterNameBox.Enabled = false;
-            this.adapterNameBox.Location = new System.Drawing.Point(109, 23);
+            this.adapterNameBox.Location = new System.Drawing.Point(145, 27);
+            this.adapterNameBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.adapterNameBox.Name = "adapterNameBox";
-            this.adapterNameBox.Size = new System.Drawing.Size(100, 20);
+            this.adapterNameBox.Size = new System.Drawing.Size(132, 25);
             this.adapterNameBox.TabIndex = 4;
             // 
             // currentAdapterGroup
@@ -300,59 +330,78 @@
             this.currentAdapterGroup.Controls.Add(this.adapterNameBox);
             this.currentAdapterGroup.Controls.Add(this.button3);
             this.currentAdapterGroup.Enabled = false;
-            this.currentAdapterGroup.Location = new System.Drawing.Point(12, 157);
+            this.currentAdapterGroup.Location = new System.Drawing.Point(16, 181);
+            this.currentAdapterGroup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.currentAdapterGroup.Name = "currentAdapterGroup";
-            this.currentAdapterGroup.Size = new System.Drawing.Size(229, 87);
+            this.currentAdapterGroup.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.currentAdapterGroup.Size = new System.Drawing.Size(305, 100);
             this.currentAdapterGroup.TabIndex = 12;
             this.currentAdapterGroup.TabStop = false;
-            this.currentAdapterGroup.Text = "Obecny adapter";
+            this.currentAdapterGroup.Text = "适配器信息";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 52);
+            this.label3.Location = new System.Drawing.Point(23, 60);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Adres MAC:";
+            this.label3.Text = "MAC地址:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 26);
+            this.label4.Location = new System.Drawing.Point(23, 30);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.Size = new System.Drawing.Size(75, 15);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Nazwa adaptera:";
+            this.label4.Text = "设备名称:";
             // 
             // adapterMacBox
             // 
             this.adapterMacBox.Enabled = false;
-            this.adapterMacBox.Location = new System.Drawing.Point(109, 49);
+            this.adapterMacBox.Location = new System.Drawing.Point(145, 57);
+            this.adapterMacBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.adapterMacBox.Name = "adapterMacBox";
-            this.adapterMacBox.Size = new System.Drawing.Size(100, 20);
+            this.adapterMacBox.Size = new System.Drawing.Size(132, 25);
             this.adapterMacBox.TabIndex = 5;
             // 
             // button3
             // 
             this.button3.AutoSize = true;
-            this.button3.Location = new System.Drawing.Point(58, 115);
+            this.button3.Location = new System.Drawing.Point(77, 133);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 24);
+            this.button3.Size = new System.Drawing.Size(191, 29);
             this.button3.TabIndex = 2;
             this.button3.Text = "Paruj urządzenie";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // disconnectDeviceButton
+            // 
+            this.disconnectDeviceButton.AutoSize = true;
+            this.disconnectDeviceButton.Location = new System.Drawing.Point(150, 81);
+            this.disconnectDeviceButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.disconnectDeviceButton.Name = "disconnectDeviceButton";
+            this.disconnectDeviceButton.Size = new System.Drawing.Size(121, 29);
+            this.disconnectDeviceButton.TabIndex = 8;
+            this.disconnectDeviceButton.Text = "断开";
+            this.disconnectDeviceButton.UseVisualStyleBackColor = true;
+            this.disconnectDeviceButton.Click += new System.EventHandler(this.disconnectDeviceButton_Click);
+            // 
             // FormBT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 266);
+            this.ClientSize = new System.Drawing.Size(963, 307);
             this.Controls.Add(this.currentAdapterGroup);
             this.Controls.Add(this.adaptersGroupBox);
             this.Controls.Add(this.sendFileGroupBox);
             this.Controls.Add(this.allDevicesGroupBox);
             this.Controls.Add(this.actualDeviceGroupBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormBT";
             this.Text = "Program do obsługi Bluetooth";
             this.actualDeviceGroupBox.ResumeLayout(false);
@@ -398,6 +447,7 @@
         private System.Windows.Forms.CheckBox unknownCheckBox;
         private System.Windows.Forms.CheckBox rememberedCheckBox;
         private System.Windows.Forms.CheckBox authenticateCheckBox;
+        private System.Windows.Forms.Button disconnectDeviceButton;
     }
 }
 
